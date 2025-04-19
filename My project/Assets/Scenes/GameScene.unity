@@ -553,7 +553,7 @@ GameObject:
   m_Component:
   - component: {fileID: 408932683}
   m_Layer: 0
-  m_Name: ----- CANVAS ---- (4)
+  m_Name: '----- CANVAS ---- '
   m_TagString: EditorOnly
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -815,7 +815,7 @@ GameObject:
   m_Component:
   - component: {fileID: 492565311}
   m_Layer: 0
-  m_Name: ----- ENVIRONMENT ---- (3)
+  m_Name: '----- ENVIRONMENT ---- '
   m_TagString: EditorOnly
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1145,6 +1145,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1048644353}
+  - component: {fileID: 1048644356}
   - component: {fileID: 1048644355}
   - component: {fileID: 1048644354}
   m_Layer: 0
@@ -1167,6 +1168,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1457346745}
   - {fileID: 2331793204351191421}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1217,9 +1219,32 @@ Rigidbody:
   m_ImplicitTensor: 1
   m_UseGravity: 1
   m_IsKinematic: 0
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 2
+--- !u!114 &1048644356
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1048644352}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e510cbf6416d43346bafdbd433f868db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  movement_speed: 40
+  _orientationTransform: {fileID: 1457346745}
+  _JumpKey: 32
+  _JumpForce: 8
+  Jumped_Movement_Speed: 0.3
+  _canjump: 1
+  _JumpCooldown: 0.5
+  _playerHeight: 1
+  _groundLayer:
+    serializedVersion: 2
+    m_Bits: 64
 --- !u!1 &1321152082
 GameObject:
   m_ObjectHideFlags: 0
@@ -1232,7 +1257,7 @@ GameObject:
   - component: {fileID: 1321152085}
   - component: {fileID: 1321152084}
   - component: {fileID: 1321152083}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1339,7 +1364,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1345504190}
   m_Layer: 0
-  m_Name: ----- SYSTEMS ---- (2)
+  m_Name: '----- SYSTEMS ---- '
   m_TagString: EditorOnly
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1446,6 +1471,37 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1407540360}
   m_Mesh: {fileID: -3030143122728168132, guid: 2798ac25cc79c0c4fb5c5ae9bf067f8b, type: 3}
+--- !u!1 &1457346744
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1457346745}
+  m_Layer: 0
+  m_Name: Orientation
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1457346745
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1457346744}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1048644353}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1457585272
 GameObject:
   m_ObjectHideFlags: 0
